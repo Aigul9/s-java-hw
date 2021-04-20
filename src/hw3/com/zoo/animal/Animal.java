@@ -1,4 +1,4 @@
-package Part2.com.zoo.animal;
+package hw3.com.zoo.animal;
 
 public abstract class Animal implements IMoveable {
     protected String name;

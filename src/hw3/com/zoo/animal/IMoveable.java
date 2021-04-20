@@ -1,4 +1,4 @@
-package Part2.com.zoo.animal;
+package hw3.com.zoo.animal;
 
 public interface IMoveable {
     default void play() {
@@ -42,7 +42,7 @@ public interface IMoveable {
     };
 
     default void hunt() {
-        System.out.println("Huanting");
+        System.out.println("Hunting");
     };
 
     default void run() {

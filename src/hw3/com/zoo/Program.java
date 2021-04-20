@@ -1,7 +1,7 @@
-package Part2.com.zoo;
+package hw3.com.zoo;
 
-import Part2.com.zoo.animal.Cat;
-import Part2.com.zoo.animal.Rabbit;
+import hw3.com.zoo.animal.Cat;
+import hw3.com.zoo.animal.Rabbit;
 
 public class Program {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Part2.com.zoo.animal;
+package hw3.com.zoo.animal;
 
 public class Dolphin extends Animal {
     public Dolphin(String name) {
