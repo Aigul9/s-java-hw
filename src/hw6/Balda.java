@@ -17,7 +17,8 @@ public class Balda {
             letters.add(targetWord.charAt(i));
         }
 
-        int[] status = new int[]{1, 1};
+        int[] status = new int[]{1, 1},
+                points = new int[]{0, 0};
         HashMap<Integer, LinkedHashSet<String>> history = new HashMap<>();
         history.put(0, new LinkedHashSet<>());
         history.put(1, new LinkedHashSet<>());
@@ -51,18 +52,24 @@ public class Balda {
             }
 
             currentPlayer = currentPlayer == 0 ? 1 : 0;
+            points[currentPlayer] += word.length();
             System.out.println("+1");
         }
 
-        int total1 = history.get(0).size(), total2 = history.get(1).size();
-        System.out.println("Player №1");
-        System.out.println(String.join(", ", history.get(0)));
-        System.out.println(history.get(0).size() + " word(s) in total.");
-        System.out.println("Player №2");
-        System.out.println(String.join(", ", history.get(1)));
-        System.out.println(history.get(1).size() + " word(s) in total.");
+        for (int i = 0; i <= 1; i++) {
+            System.out.println("Player №" + (i + 1));
+            System.out.println(String.join(", ", history.get(i)));
+            System.out.println(history.get(i).size() + " word(s) in total.");
+            System.out.println("Points: " + points[i]);
+        }
 
-        System.out.println("Winner is player № " + (total1 > total2 ? 1 : 2));
+        if (points[0] > points[1]) {
+            System.out.println("Winner is player №1");
+        } else if (points[0] == points[1]) {
+            System.out.println("Both players got equal points.");
+        } else {
+            System.out.println("Winner is player №2");
+        }
     }
 
     public static boolean validateWord(String word, HashSet<Character> lettersSet) {
