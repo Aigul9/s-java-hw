@@ -1,8 +1,12 @@
 package hw3.com.zoo;
 
+import hw3.com.zoo.animal.Animal;
 import hw3.com.zoo.animal.Cat;
 import hw3.com.zoo.animal.Rabbit;
+import hw3.com.zoo.cage.Cage;
+import hw3.com.zoo.exception.DuplicateAnimalException;
 import hw3.com.zoo.exception.FoodException;
+import hw3.com.zoo.exception.LimitException;
 import hw3.com.zoo.exception.SleepException;
 
 public class Program {
@@ -50,5 +54,18 @@ public class Program {
 
         rabbit.create("Jenny");
         rabbit.create("Jenny", "New Zealand");
+
+        Cage animals = new Cage(10);
+        Rabbit rabbit2 = new Rabbit("Jenny2");
+        try {
+            animals.add(rabbit);
+            animals.add(rabbit2);
+            animals.add(cat);
+            animals.add(rabbit);
+            animals.display();
+        } catch (LimitException | DuplicateAnimalException e) {
+            animals.display();
+            System.out.println(e.getMessage());
+        }
     }
 }

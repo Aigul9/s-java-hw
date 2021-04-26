@@ -7,6 +7,10 @@ public abstract class Animal implements IMovable {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public abstract void say();
 
     public abstract void getAction();
