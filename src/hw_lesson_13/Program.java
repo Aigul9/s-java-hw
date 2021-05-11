@@ -49,8 +49,8 @@ public class Program {
         List<Integer> nums1 = new ArrayList<>(Arrays.asList(5, 6, 9, -15)),
                 nums2 = new ArrayList<>(Arrays.asList(2, -15, 30, 19, 9));
 
-        Stream.of(nums1, nums2)
-                .flatMap(n -> n.stream())
+        nums1.stream()
+                .filter(nums2::contains)
                 .collect(Collectors.toSet()).
                 forEach(n -> System.out.print(n + " "));
     }
