@@ -1,17 +1,19 @@
-package Part2.com.zoo.animal;
+package hw3.com.zoo.animal;
 
-public abstract class Animal implements IMoveable {
+public abstract class Animal implements IMovable {
     protected String name;
 
     public Animal(String name) {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public abstract void say();
 
-    public abstract void eat();
-
-    public abstract void sleep();
+    public abstract void getAction();
 
     public void create(String name) {
         System.out.println(name + " is created.");

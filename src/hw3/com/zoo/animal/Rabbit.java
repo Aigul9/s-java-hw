@@ -1,4 +1,4 @@
-package Part1.com.zoo.animal;
+package hw3.com.zoo.animal;
 
 public class Rabbit extends Animal {
     public Rabbit(String name) {
@@ -10,11 +10,8 @@ public class Rabbit extends Animal {
         System.out.println("hrrr");
     }
 
-    public void hide() {
-        System.out.println(name + " is hiding.");
-    }
-
-    public void jump() {
-        System.out.println(name + " is jumping.");
+    @Override
+    public void getAction() {
+        System.out.println("Hide");
     }
 }

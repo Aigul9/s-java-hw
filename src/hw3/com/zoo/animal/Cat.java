@@ -1,4 +1,4 @@
-package Part2.com.zoo.animal;
+package hw3.com.zoo.animal;
 
 public class Cat extends Animal {
     public Cat(String name) {
@@ -11,12 +11,7 @@ public class Cat extends Animal {
     }
 
     @Override
-    public void eat() {
-        System.out.println("Cat is eating.");
-    }
-
-    @Override
-    public void sleep() {
-        System.out.println("Cat is sleeping.");
+    public void getAction() {
+        System.out.println("Embrace.");
     }
 }
